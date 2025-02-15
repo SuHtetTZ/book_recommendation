@@ -10,12 +10,14 @@ import lombok.NoArgsConstructor;
 public class Book {
 	private int id;
     private String title;
-    private String authors;
+    private String author;
     private String genre;
-    private String image;
+    private String tags;
+    private String img;
     private String description;
-    private int publishedYear;
-    private double averageRating;
-    private int numPages;
+    private int published_year;
+    private double average_rating;
+    private int num_pages;
+    private double price;
 
 }
