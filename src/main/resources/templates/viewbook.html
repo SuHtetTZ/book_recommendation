@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .recommendations {
+            margin-top: 20px;
+        }
+        .book-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Book Details</h1>
+
+    <p><strong>ID:</strong> <span th:text="${book.id}"></span></p>
+    <p><strong>Title:</strong> <span th:text="${book.title}"></span></p>
+    <img th:src="${book.img}" alt="Book Cover">
+    <p><strong>Author:</strong> <span th:text="${book.author}"></span></p>
+    <p><strong>Genre:</strong> <span th:text="${book.genre}"></span></p>
+    <p><strong>Tags:</strong> <span th:text="${book.tags}"></span></p>
+    <p><strong>Description:</strong> <span th:text="${book.description}"></span></p>
+
+    <a href="/books">Back to Book List</a>
+
+    <!-- Recommended Books Section -->
+    <div class="recommendations">
+        <h2>Recommended Books</h2>
+        <div th:each="recBook : ${recommendedBooks}" class="book-card">
+            <p><strong>ID:</strong> <span th:text="${recBook.id}"></span></p>
+            <p><strong>Title:</strong> <span th:text="${recBook.title}"></span></p>
+            <p><strong>Author:</strong> <span th:text="${recBook.author}"></span></p>
+            <p><strong>Genre:</strong> <span th:text="${recBook.genre}"></span></p>
+            <p><strong>Tags:</strong> <span th:text="${recBook.tags}"></span></p>
+        </div>
+    </div>
+
+</body>
+</html>
