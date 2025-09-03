@@ -1,5 +1,6 @@
 # book_recommendation
 just a part of recommendation algorithm
+You can view my complete book e-commerce and recommendation algorithm in my book_point_final repository
 
 Run this applicaton
 in the browser enter this
